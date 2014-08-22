@@ -1,0 +1,37 @@
+<table>
+  <thead>
+  <tr>
+    <th>Zip</th>
+    <th>Total Spots</th>
+    <th>Price Per Month</th>
+  </tr>
+  </thead>
+  <tbody>
+    <% @totalprice = 0
+    @zipcodes.each do |zipcode|
+    @ziptotal = 0
+    @counter = 0 %>
+    <tr>
+      <% if zipcode.spot1 %>
+        <% @counter += 1 %>
+      <% end %>
+      <% if zipcode.spot2 %>
+        <% @counter += 1 %>
+      <% end %>
+      <% if zipcode.spot3 %>
+        <% @counter += 1 %>
+      <% end %>
+      <% if zipcode.spot4 %>
+        <% @counter += 1 %>
+      <% end %>
+      <% if zipcode.spot5  %>
+        <% @counter += 1 %>
+      <% end %>
+      <td><%= zipcode.zip %></td>
+      <td><%= @counter %> </td>
+      <td><div id = "select-zip">$<%@ziptotal = @counter * zipcode.price %><%= @ziptotal %>.00/mo</div></td>
+    </tr>
+    <% @totalprice += @ziptotal %>
+    <% end %>
+  </tbody>
+</table>

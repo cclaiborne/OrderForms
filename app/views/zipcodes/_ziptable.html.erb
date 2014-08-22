@@ -1,0 +1,54 @@
+<table>
+  <thead>
+    <tr>
+      <th>Zip</th>
+      <th>Spot1</th>
+      <th>Spot2</th>
+      <th>Spot3</th>
+      <th>Spot4</th>
+      <th>Spot5</th>
+      <th>Monthly Ad Displays</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @zipcodes.each do |zipcode| %>
+  <% @counter = 0%>
+  <tr>
+      <td><%= zipcode.zip %></td>
+      <td><% if zipcode.spot1 == false %>
+      Available
+      <% elsif %>
+      <% @counter += 1 %>
+      $<%=zipcode.price%>
+      <% end %></td>
+      <td><% if zipcode.spot2 == false %>
+      Available
+      <% elsif %>
+      <% @counter += 1 %>
+      $<%=zipcode.price%>
+      <% end %></td>
+      <td><% if zipcode.spot3 == false %>
+      Available
+      <% elsif %>
+      <% @counter += 1 %>
+      $<%=zipcode.price%>
+      <% end %></td>
+      <td><% if zipcode.spot4 == false %>
+      Available
+      <% elsif %>
+      <% @counter += 1 %>
+      $<%=zipcode.price%>
+      <% end %></td>
+      <td><% if zipcode.spot5 == false %>
+      Available
+      <% elsif %>
+      <% @counter += 1 %>
+      $<%=zipcode.price%>
+      <% end %></td>
+      <td><%=@counter * 5000%></td>
+      <td><div id = "select-zip"><%= link_to "Select ZIP Code", edit_zipcode_path(zipcode) %></div></td>
+  </tr>
+<% end %>
+</tbody>
+</table>

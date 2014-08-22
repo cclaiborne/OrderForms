@@ -1,0 +1,32 @@
+<%= simple_form_for(@zipcode) do |f| %>
+  <%= f.error_notification %>
+  <div class="form-inputs">
+    <table>
+      <tr>
+        <td>
+          <%= f.input :spot1  %>
+          $<%= @zipcode.price  %>
+         </td>
+         <td>
+          <%= f.input :spot2 %>
+          $<%= @zipcode.price  %>
+         </td>
+         <td>
+          <%= f.input :spot3 %>
+          $<%= @zipcode.price  %>
+         </td>
+         <td>
+          <%= f.input :spot4 %>
+          $<%= @zipcode.price  %>
+         </td>
+         <td>
+          <%= f.input :spot5 %>
+          $<%= @zipcode.price  %>
+         </td>
+      </tr>
+  </table>
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit, "Get Spots Now" %>
+  </div>
+<% end %>

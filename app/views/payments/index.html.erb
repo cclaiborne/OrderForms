@@ -1,0 +1,21 @@
+<style type="text/css">
+#paymentswrapper{
+  float:left;
+  padding-left: 10px;
+}
+</style>
+<div id = "paymentswrapper">
+  <div class="row">
+    <h3>Just a few more details</h3>
+  </div>
+  <div class="row">
+    Select Payment Plan
+  </div>
+  <div class="row">
+    <%= link_to 'Annual Recuring Monthly', payments_path, :color=> '#FFFFFF', :class=> "button" %>
+    <%= link_to '6 Months Prepaid', payments_path, :color=> '#FFFFFF', :class=> "button" %>
+    <%= render "paytable" %>
+  </div>
+  <h3>Total Charge: $<%= @totalprice %>.00/mo</h3>
+  <%= render 'form' %>
+</div>

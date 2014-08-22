@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  zip: 1
+  spot1: false
+  spot2: false
+  spot3: false
+  spot4: false
+  spot5: false
+
+two:
+  zip: 1
+  spot1: false
+  spot2: false
+  spot3: false
+  spot4: false
+  spot5: false
