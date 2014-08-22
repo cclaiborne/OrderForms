@@ -7,4 +7,5 @@ Important!
 Please run these commands in your terminal before launching application in browser:
 
 rake db:migrate
+
 rake db:seed
